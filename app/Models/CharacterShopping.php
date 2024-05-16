@@ -4,10 +4,12 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Model; // Import the Model class
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class CharacterShopping  extends Model
 {
-    protected $table = 'CharacterShopping';
+    use HasFactory;
+    protected $table = 'character_shopping';
 
     protected $primaryKey = 'shopping_id';
     protected $fillable = ['shopping_date'];

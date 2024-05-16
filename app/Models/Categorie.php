@@ -4,9 +4,11 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Model; // Import the Model class
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Categorie extends Model
 {
+    use HasFactory;
     protected $table = 'Categorie';
 
     protected $primaryKey = 'idCategorie';
