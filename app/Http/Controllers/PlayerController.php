@@ -1,14 +1,34 @@
 <?php
 
 namespace App\Http\Controllers;
-
-
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
 use App\Models\Player;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
 class PlayerController extends Controller
 {
+    /**
+     * Remove the specified player from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+{
+    // Delete the player by idPlayer column
+    DB::table('Player')->where('id', $id)->delete();
+
+    // Set a success message
+    Session::flash('success', 'Player deleted successfully!');
+
+    // Redirect back to the previous page
+    return back();
+}
+
+
+    
     /**
      * Show the form for creating a new player.
      *
@@ -19,6 +39,12 @@ class PlayerController extends Controller
         return view('create-player');
     }
 
+    public function index()
+    {
+        // Fetch all players
+        $players = Player::all();
+        return view('welcome', compact('players'));
+    }
     /**
      * Store a newly created player in storage.
      *

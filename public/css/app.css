@@ -3,3 +3,27 @@ h1 {
     color: red;
     font-size: 24px;
 }
+.table-custom {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.table-custom th,
+.table-custom td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+}
+
+.table-custom thead th {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.table-custom tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-custom tbody tr:hover {
+    background-color: #e2e2e2;
+}
