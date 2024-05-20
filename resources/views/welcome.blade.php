@@ -72,7 +72,7 @@
             </div>
         @endif
         <!-- Form Section -->
-        <form action="{{ route('player.store') }}" method="POST">
+        <form action="{{ route('player.store') }}" method="POST" class="form-container">
             @csrf
             <div class="form-group">
                 <label for="userName">Username</label>
@@ -95,7 +95,7 @@
                 <input type="number" class="form-control" id="gold" name="gold" required>
             </div>
             <br><br>
-            <button type="submit" class="btn btn-primary">Ajout</button>
+            <button type="submit" class="btn btn-primarye">Ajout</button>
         </form>
     </div>
     </div>
