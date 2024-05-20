@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
+    
     <div class="container mt-5">
         <h1>Add Player</h1>
         <!-- Flash Message Section -->
